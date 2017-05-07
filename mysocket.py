@@ -14,14 +14,14 @@ class Mysocket:
         def mysend(self, msg):
             totalsent = 0
             while totalsent < len(msg):
-                sent = self.sock.send(msg[totalsent:].encode)
+                sent = self.sock.send(msg[totalsent:].encode())
                 if sent == 0:
                     raise RuntimeError("socket connection broken")
                 totalsent = totalsent + sent
         def myreceive(self, size):
             msg = ''
             while len(msg) < size:
-                chunk = self.sock.recv(size-len(msg.decode))
+                chunk = self.sock.recv(size-len(msg.decode()))
                 if chunk == '':
                     raise RuntimeError("socket connection broken")
                 msg = msg + chunk
