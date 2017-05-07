@@ -133,7 +133,7 @@ class StockManagerWindow(QtGui.QMainWindow, Ui_MainWindow):
     def toFloat(self,f):
         try:
             return float(f)
-        except ValueError,e:
+        except ValueError as e:
             return 0.0
             
     def printTable(self):
