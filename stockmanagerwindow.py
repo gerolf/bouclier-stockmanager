@@ -21,7 +21,7 @@ class StockManagerWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.connect(self.actionNieuwe_telling, QtCore.SIGNAL("clicked()"), self.newTelling)
 
     def newTelling(self):
-        print "starting new telling"
+        print("starting new telling")
     
     def markAsCounted(self):
         if self.tellingTabWidget.currentIndex()==1:
