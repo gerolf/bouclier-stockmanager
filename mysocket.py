@@ -21,7 +21,7 @@ class Mysocket:
         def myreceive(self, size):
             msg = ''
             while len(msg) < size:
-                chunk = self.sock.recv(size-len(msg)).decode()
+                chunk = self.sock.recv(size-len(msg))
                 if chunk == '':
                     raise RuntimeError("socket connection broken")
                 msg = msg + chunk
